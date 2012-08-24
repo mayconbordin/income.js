@@ -1,0 +1,574 @@
+a {
+    text-decoration: none;
+}
+
+/* INCOME STATEMENT ========================================================= */
+.income-statement ul {
+	list-style-type: none;
+}
+
+/***** HEADER *****/
+.income-statement .header {
+	line-height: 35px;
+	color: white;
+}
+
+.income-statement .header li {
+	display: inline;
+	float: left;
+	background: #ffb400;
+}
+
+.income-statement .header li.account-label {
+	width: 70%;
+}
+
+.income-statement .header li.projection-label {
+	width: 20%;
+}
+
+.income-statement .header li.options-label {
+	width: 10%;
+	text-align: right;
+}
+.income-statement .header li.projection-label span {
+	padding-left: 35px;
+}
+
+.income-statement .header li.options-label span {
+	margin-right: 20px;
+}
+
+.income-statement .header li.account-label span {
+	padding-left: 10px;
+}
+
+/***** BODY *****/
+.income-statement .body {
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	clear: both;
+}
+
+.income-statement .body li {
+	padding: 0 10px;
+	line-height: 45px;
+}
+
+.income-statement .body li:hover {
+	cursor: pointer;
+}
+
+.income-statement .body .group li.account,
+.income-statement .body .group .new,
+.income-statement .body .group .ui-state-highlight {
+	margin-bottom: 5px;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+.income-statement .body .odd,
+.income-statement .body .odd .account {
+	background-color: #f2f2f2;
+}
+
+.income-statement .body .odd .account,
+.income-statement .body .odd .new {
+	border: 1px solid #bbb;
+}
+
+.income-statement .body .even,
+.income-statement .body .even .account {
+	background-color: #d0d0d0;
+}
+
+.income-statement .body .even .account,
+.income-statement .body .even .new {
+	border: 1px solid #eee;
+}
+
+.income-statement .body .unmovable {
+	padding: 10px 0;
+	margin: 0;
+	height: 1px;
+	display: none;
+}
+
+.income-statement .body .group .title,
+.income-statement .body .result {
+	text-transform: uppercase;
+}
+
+.income-statement .body .account .title  {
+	text-transform: none;
+}
+
+.income-statement .body .title {
+	cursor: move;
+}
+
+.income-statement .body .selected,
+.income-statement .body .odd .selected,
+.income-statement .body .even .selected {
+	background: #b5d64d;
+}
+
+.income-statement .body .ui-state-highlight {
+	background: #ff8400;
+	border: 0;
+	height: 45px;
+	line-height: 45px;
+}
+
+.income-statement .body .group ul {
+	padding-bottom: 10px;
+}
+
+.income-statement .body .group .container {
+	position: relative;
+	float: right;
+	top: 9px;
+}
+
+.income-statement .body .group .deleteGroup {
+	margin-right: 10px;
+}
+
+.income-statement .body .delete {
+	background: url(../img/delete_16.png) no-repeat;
+	padding: 7px 9px;
+}
+
+.income-statement .body .add {
+	background: url(../img/add_16.png) no-repeat;
+	padding: 7px;
+	margin-right: 5px;
+}
+
+.income-statement .body .delete span,
+.income-statement .body .add span {
+	display: none;
+}
+
+.income-statement .body .account .container,
+.income-statement .body .result .container {
+	position: relative;
+	float: right;
+	top: 0px;
+	width: 30%;
+}
+
+.income-statement .body .account .container .value,
+.income-statement .body .result .container .value {
+	width: 150px;
+	height: 25px;
+	float: left;
+	margin-top: 7px;
+	margin-left: -5px;
+	font-size: 12pt;
+	text-align: center;
+	border: 1px solid #555;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+.income-statement .body .group .account .container .value {
+	margin-left: 0;
+}
+
+.income-statement .body .account .container .function,
+.income-statement .body .result .container .function {
+	padding: 3px 5px;
+	margin-left: 10px;
+	position: relative;
+	top: -1px;
+	text-transform:lowercase;
+}
+
+.income-statement .body .account .container .active,
+.income-statement .body .result .container .active {
+	background: #ccefff;
+}
+
+.income-statement .body .account .container .error,
+.income-statement .body .result .container .error {
+	background: #FFC4C4;
+}
+
+.income-statement .body .account .container .delete,
+.income-statement .body .result .container .delete {
+	float: right;
+	margin-top: 15px;
+	margin-right: 10px;
+}
+
+.income-statement .body .result .container .delete {
+	margin-right: 11px;
+}
+
+.income-statement .body .group .account .delete {
+	margin-right: 0;
+}
+
+/***** FOOTER *****/
+.income-statement .footer {
+	padding: 0 10px;
+	line-height: 45px;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+
+.income-statement .footer {
+	border: 1px solid #ccc;
+	background: #ebebeb;
+}
+
+/***** ADD *****/
+.add-account {
+	line-height: 45px;
+	background: url(../img/add.png) no-repeat 0 50%;
+	padding-left: 30px;
+	cursor: pointer;
+	color: #99ca00;
+	text-transform: uppercase;
+}
+
+.income-statement .body .new label {
+	
+}
+
+.income-statement .body .new .combobox {
+	width: 300px;
+}
+
+.income-statement .body .new .message {
+	display: none;
+	font-size: 10pt;
+	padding: 5px;
+	margin: 0 0 5px 0;
+	
+	background: #FFC4C4;
+	/*background: #FFC4C4 url(../img/delete_16.png) no-repeat 10px 6px;*/
+	border: 1px solid #FF0000;
+	
+	height: 25px;
+	line-height: 25px;
+	
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+.income-statement .body .new .close {
+    float: left;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+.income-statement .body .new .labelNewAccount {
+	margin: 0 5px;
+}
+
+.income-statement .body .new .button {
+	margin-left: 5px;
+	padding: 6px;
+}
+
+.income-statement .body .new .green-button {
+	padding: 6px;
+}
+
+/* LOADER =================================================================== */
+.income-statement .body li.loader {
+	text-align: center;
+	padding: 15px 0 0 0;
+}
+
+/* NEW ACCOUNT BOX ========================================================== */
+#new-account-box {
+	width: 360px;
+}
+
+#new-account-box h2 {
+	margin-bottom: 10px;
+}
+
+#new-account-box .container {
+	clear: both;
+	height: 30px;
+	margin-bottom: 5px;
+}
+
+#new-account-box .container label {
+	float: left;
+	line-height: 30px;
+}
+
+#new-account-box .container input,
+#new-account-box .container select {
+	float: right;
+	width: 200px;
+}
+
+#new-account-box .buttons {
+	float: right;
+	clear: both;
+	margin-top: 10px;
+	height: 20px;
+}
+
+#new-account-box .buttons .cancel {
+	padding: 2px 10px;
+	margin-right: 5px;
+}
+
+#new-account-box .buttons .save {
+	padding: 2px 10px;
+}
+
+
+/* FORMULA BOX ============================================================== */
+#formulator {
+	width: 570px;
+}
+
+#formulator .body {
+	margin-top: 10px;
+}
+
+#formulator .header {
+	height: 25px;
+	margin-bottom: 2px;
+	padding: 0 5px;
+	line-height: 25px;
+	background: #ffb400;
+	color: #fff;
+	
+	border-top-left-radius: 5px;
+		-webkit-border-top-left-radius: 5px;
+			-moz-border-radius-topleft: 5px;
+
+	border-top-right-radius: 5px;
+		-webkit-border-top-right-radius: 5px;
+			-moz-border-radius-topright: 5px;
+}
+
+#formulator .header span.account {
+	float: left;
+}
+
+#formulator .header span.id {
+	float: right;
+	padding-right: 30px;
+}
+
+#formulator .viewport {
+	height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+#formulator .overview {
+	list-style: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	width: 560px;
+}
+
+#formulator .scrollbar {
+	position: relative;
+	float: right;
+	width: 8px;
+}
+
+#formulator .track {
+	background: #666;
+	width: 8px;
+	position: relative;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+#formulator .thumb {
+	background: #ccc;
+	width: 8px;
+	cursor: pointer;
+	overflow: hidden;
+	position: absolute;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+#formulator .thumb .end {
+	overflow: hidden;
+	height: 5px;
+	width: 25px;
+}
+
+#formulator .disable {
+	display: none;
+}
+
+#formulator ul li {
+	height: 25px;
+	background: #eee;
+	margin-bottom: 2px;
+	padding: 0 5px;
+	line-height: 25px;
+}
+
+#formulator ul li.item:hover {
+	background: #ECFFB3;
+	cursor: pointer;
+}
+
+#formulator .error {
+	margin-top: 15px;
+	color: red;
+	display: none;
+}
+
+#formulator-formula {
+	margin-top: 10px;
+}
+
+#formulator-formula .run {
+	float: right;
+	position: relative;
+	top: -21px;
+}
+
+#formulator-formula .run h3 {
+	margin: 0 0 4px 35px;
+}
+
+#formulator-formula .run a {
+	margin-right: 10px;
+}
+
+#formulator-formula .run input {
+	width: 150px;
+	height: 35px;
+	font-size: 12pt;
+	text-align: center;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+#formulator-formula p {
+	font-size: 10pt;
+	margin-top: 4px;
+}
+
+#formulator-formula textarea {
+	width: 360px;
+	height: 35px;
+	margin-top: 4px;
+	border: 2px solid #ccc;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+#formulator-buttons {
+	margin: 30px 0 10px 0;
+	float: right;
+}
+
+#formulator-buttons .cancel {
+	margin-right: 5px;
+}
+
+#formulator-buttons .help {
+	left: 10px;
+	position: absolute;
+	bottom: 10px;
+}
+
+/* BUTTON =================================================================== */
+a.button {
+	color: #fff;
+	padding: 8px 10px;
+	background: #00aefe;
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+a.button:hover {
+	background: #ffb400;
+	text-decoration: none;
+}
+
+a.green-button {
+	color: #fff;
+	background: #a7dd16;
+	border: 1px solid #a7dd16;
+	
+	padding: 8px 10px;
+	
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+a.green-button:hover {
+	color: #fff;
+	text-decoration: none;
+	background: #b7f218;
+}
+
+a.red-button {
+	color: #fff;
+	background: #ff5013;
+	
+	padding: 8px 10px;
+	
+	border-radius: 5px;
+		-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+}
+
+a.red-button:hover {
+	color: #fff;
+}
+
+/* JQUERY UI ================================================================ */
+.ui-datepicker {
+	font-size: 10pt;
+}
+
+.ui-button {
+	margin-left: -1px;
+}
+.ui-button-icon-only .ui-button-text {
+	padding: 5px 0 6px 0;
+}
+.ui-autocomplete-input {
+	margin: 0;
+	padding: 4px 0;
+}
+.ui-autocomplete {
+	height: 200px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.ui-widget {
+	font-family: CantarellBold, Arial, Tahoma, sans-serif;
+	font-size: 12pt;
+}
+
+.ui-datepicker {
+	font-size: 10pt;
+}

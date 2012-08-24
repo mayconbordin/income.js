@@ -1,0 +1,60 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+    <title>income.js</title>
+    
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/base/jquery.ui.all.css">
+    <link rel="stylesheet" href="css/facebox.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- jQuery -->
+    <script src="lib/jquery-1.7.1.min.js"></script>
+    
+    <!-- jQuery UI -->
+    <script src="lib/jquery.ui.core.min.js"></script>
+    <script src="lib/jquery.ui.widget.min.js"></script>
+    <script src="lib/jquery.ui.mouse.min.js"></script>
+    <script src="lib/jquery.ui.sortable.min.js"></script>
+    
+    <script src="lib/jquery.ui.position.min.js"></script>
+    <script src="lib/jquery.ui.autocomplete.min.js"></script>
+    <script src="lib/jquery.ui.button.min.js"></script>
+    <script src="lib/jquery.ui.combobox.js"></script>
+    
+    <!-- FaceBox -->
+    <script src="lib/jquery.facebox.js"></script>
+    
+    <!-- TinyScrollbar -->
+    <script src="lib/jquery.tinyscrollbar.js"></script>
+    
+    <script src="lib/utils.js"></script>
+    
+    <!-- JavaScript income.js -->
+    <script src="src/model.js"></script>
+    <script src="src/income.js"></script>
+    
+    <script>
+    $(document).ready(function () {
+		var is = new IncomeStatement("#income-statement", {
+			id: 1,
+			type: "projection",
+			
+			onValueChange: function(item) {
+				console.log(item.id + ": value changed");
+			},
+			onItemClick: function(item, remove) {
+				console.log("item clicked");
+			}
+		});
+	});
+    </script>
+    
+</head>
+<body>
+    
+    <div id="income-statement" class="income-statement"></div>
+    
+</body>
+</html>
